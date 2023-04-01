@@ -1,10 +1,10 @@
-name: Don Angie
+name: Laser Wolf
 on:
   schedule:
   - cron: "00 19 * * *"
 
 jobs:
-  book-reservation-1:
+  book-reservation-2:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -23,4 +23,5 @@ jobs:
         max_attempts: 4
         retry_on: timeout
         command: |
-          python concierge.py --email ${{ secrets.USER_EMAIL }} --password ${{ secrets.USER_PASSWORD }} --api-key ${{ secrets.API_KEY }} --venue-id 1505 --party-size 2 --times 19:30:00 19:00:00 19:15:00 19:45:00 20:00:00 20:15:00 20:30:00 --date 2023-02-14 --time-to-book 19:30
+          python concierge.py --email ${{ secrets.EH_EMAIL }} --password ${{ secrets.EH_PASSWORD }} --api-key ${{ secrets.API_KEY }} --venue-id 58848 --party-size 4 --times 19:30:00 19:45:00 20:00:00 20:15:00 20:30:00 --date 2023-03-03 --time-to-book 19:30
+      
