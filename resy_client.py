@@ -21,7 +21,7 @@ class ResyAPI():
         
         self.auth_token = None
 
-    @retry(stop=stop_after_attempt(10))
+    @retry(stop=stop_after_delay(300))
     def authenticate(self) -> str:
         """fetch auth token"""
         response = requests.post(parse.urljoin(RESY_URL, f"3/auth/password"), 
