@@ -21,5 +21,3 @@ VENUE_ID_TO_RESTAURANT_NAME = {
     2567: "Via Carota",
     25973: "L'Artusi",
 }
-
-OUTDOOR_SLOT_KEYWORDS = ["outdoor", "patio", "outside"]
